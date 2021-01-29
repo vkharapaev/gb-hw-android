@@ -1,3 +1,50 @@
 <resources>
     <string name="app_name">HW1</string>
+
+    <string name="page1_textview_example">TextView Example</string>
+    <string name="page1_edittext_example">EditText Example</string>
+    <string name="page1_button_example">Button Example</string>
+    <string name="page1_switch_example">Switch Example</string>
+    <string name="page1_checkbox_example">CheckBox Example</string>
+    <string name="page1_togglebutton_example">ToggleButton Example</string>
+    <string name="page1_tooglebutton_example">ToggleButton Example</string>
+
+    <string name="page2_textpersonname">textPersonName</string>
+    <string name="page2_phone">phone</string>
+    <string name="page2_number">number</string>
+    <string name="page2_textpassword">textPassword</string>
+    <string name="page2_textemailaddress">textEmailAddress</string>
+    <string name="page2_none">none</string>
+    <string name="page2_textcapcharacters">textCapCharacters</string>
+    <string name="page2_textcapwords">textCapWords</string>
+    <string name="page2_textcapsentences">textCapSentences</string>
+    <string name="page2_textautocorrect">textAutoCorrect</string>
+    <string name="page2_textautocomplete">textAutoComplete</string>
+    <string name="page2_textmultiline">textMultiLine</string>
+    <string name="page2_textimemultiline">textImeMultiLine</string>
+    <string name="page2_textnosuggestions">textNoSuggestions</string>
+    <string name="page2_texturi">textUri</string>
+    <string name="page2_textemailsubject">textEmailSubject</string>
+    <string name="page2_textlongmessage">textLongMessage</string>
+    <string name="page2_textpostaladdress">textPostalAddress</string>
+    <string name="page2_textvisiblepassword">textVisiblePassword</string>
+    <string name="page2_textwebedittext">textWebEditText</string>
+    <string name="page2_textfilter">textFilter</string>
+    <string name="page2_textphonetic">textPhonetic</string>
+    <string name="page2_textwebemailaddress">textWebEmailAddress</string>
+    <string name="page2_textwebpassword">textWebPassword</string>
+    <string name="page2_numbersigned">numberSigned</string>
+    <string name="page2_numberdecimal">numberDecimal</string>
+    <string name="page2_numberpassword">numberPassword</string>
+    <string name="page2_datetime">datetime</string>
+    <string name="page2_date">date</string>
+    <string name="page2_time">time</string>
+    <string name="page2_textshortmessage">textShortMessage</string>
+    <string name="page2_text">text</string>
+
+    <string name="page3_calendarview">CalendarView</string>
+    <string name="page3_datepicker">DatePicker</string>
+    <string name="navmenu_task_1">Task 1</string>
+    <string name="navmenu_task_2">Task 2</string>
+    <string name="navmenu_task_3">Task 3</string>
 </resources>

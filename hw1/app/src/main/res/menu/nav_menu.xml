@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuPage1"
+        android:title="@string/navmenu_task_1" />
+    <item
+        android:id="@+id/menuPage2"
+        android:title="@string/navmenu_task_2" />
+    <item
+        android:id="@+id/menuPage3"
+        android:title="@string/navmenu_task_3" />
+</menu>
