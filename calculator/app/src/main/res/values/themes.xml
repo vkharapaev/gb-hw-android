@@ -1,6 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Base" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.SmallComponent</item>
+    </style>
+
+    <style name="Theme.Base.Calculator" parent="Theme.Base">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
