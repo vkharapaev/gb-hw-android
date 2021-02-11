@@ -20,7 +20,7 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/buttonClear"
+            app:layout_constraintBottom_toTopOf="@id/buttonSettings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -37,7 +37,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/expression_display_bottom"
-                    android:text="123+123*123-123"
                     android:textAlignment="textEnd" />
 
                 <TextView
@@ -45,7 +44,6 @@
                     style="@style/NumberDisplayStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1234567"
                     android:textAlignment="textEnd" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

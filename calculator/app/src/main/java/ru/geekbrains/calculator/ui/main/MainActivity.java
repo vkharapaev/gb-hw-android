@@ -2,7 +2,6 @@ package ru.geekbrains.calculator.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -10,8 +9,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import ru.geekbrains.calculator.databinding.ActivityMainBinding;
 import ru.geekbrains.calculator.Settings;
+import ru.geekbrains.calculator.databinding.ActivityMainBinding;
+import ru.geekbrains.calculator.interactors.OperationProcessorInteractorImpl;
 import ru.geekbrains.calculator.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         changeTheme();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        presenter = new MainPresenterImpl();
+        presenter = new MainPresenterImpl(new OperationProcessorInteractorImpl());
         initWidgets();
         presenter.takeView(this);
     }
@@ -43,15 +43,23 @@ public class MainActivity extends AppCompatActivity implements MainView {
         for (int i = 0; i < buttonContainer.getChildCount(); i++) {
             View child = buttonContainer.getChildAt(i);
             if (child instanceof Button) {
-                child.setOnClickListener(v -> {
-                    Button button = (Button) v;
-                    presenter.process(button.getText().toString());
-                });
+                Button button = (Button) child;
+                String text = button.getText().toString();
+                if (text.equals("()")) {
+                    button.setOnClickListener((view) -> {
+                        presenter.process(")");
+                        presenter.process("(");
+                    });
+                } else {
+                    button.setOnClickListener((view) -> presenter.process(text));
+                }
             }
         }
 
-        binding.buttonSettings.setOnClickListener(v ->
-                startActivity(new Intent(this, SettingsActivity.class)));
+        if (binding.buttonSettings != null) {
+            binding.buttonSettings.setOnClickListener(v ->
+                    startActivity(new Intent(this, SettingsActivity.class)));
+        }
     }
 
     @Override
@@ -68,7 +76,11 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @Override
     public void show(String text) {
-        // TODO: 2/6/2021
-        Log.d(TAG, "show: text = " + text);
+        binding.numberDisplay.setText(text);
+    }
+
+    @Override
+    public void showExpression(String text) {
+        binding.expressionDisplay.setText(text);
     }
 }

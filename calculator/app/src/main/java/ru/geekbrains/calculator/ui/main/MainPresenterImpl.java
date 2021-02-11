@@ -4,12 +4,18 @@ import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
+import ru.geekbrains.calculator.interactors.OperationProcessorInteractor;
+
 public class MainPresenterImpl implements MainPresenter {
 
     private static final String TAG = MainPresenterImpl.class.getSimpleName();
 
     private WeakReference<MainView> view;
-    private final StringBuilder sb = new StringBuilder();
+    private OperationProcessorInteractor opProcessorInteractor;
+
+    public MainPresenterImpl(OperationProcessorInteractor interactor) {
+        opProcessorInteractor = interactor;
+    }
 
     @Override
     public void takeView(MainView view) {
@@ -18,12 +24,16 @@ public class MainPresenterImpl implements MainPresenter {
 
     @Override
     public void process(String operation) {
-        // TODO: 2/6/2021  
-        Log.d(TAG, "process: operation = " + operation);
-        sb.append(operation);
-        if (view() != null) {
-            view().show(sb.toString());
+        if (view() == null) {
+            return;
         }
+        try {
+            opProcessorInteractor.process(operation);
+            view().show(opProcessorInteractor.getNumCreator().toString());
+        } catch (ArithmeticException e) {
+            view().show(e.getMessage());
+        }
+        view().showExpression(opProcessorInteractor.getExpCreator().toString());
     }
 
     private MainView view() {
