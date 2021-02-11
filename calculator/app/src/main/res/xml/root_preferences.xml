@@ -3,9 +3,9 @@
     <PreferenceCategory app:title="@string/general_header">
 
         <SwitchPreferenceCompat
-            app:key="attachment"
-            app:summaryOff="@string/theme_summary_off"
-            app:summaryOn="@string/theme_summary_on"
+            app:key="@string/settings_key_theme"
+            app:summaryOff="@string/dark_theme_off"
+            app:summaryOn="@string/dark_theme_on"
             app:title="@string/theme_title" />
 
     </PreferenceCategory>

@@ -27,6 +27,7 @@
 
     <!-- Sync Preferences -->
     <string name="theme_title">App theme</string>
-    <string name="theme_summary_on">Light theme</string>
-    <string name="theme_summary_off">Dark theme</string>
+    <string name="dark_theme_on">Dark theme</string>
+    <string name="dark_theme_off">Light theme</string>
+    <string name="settings_key_theme" translatable="false">theme</string>
 </resources>

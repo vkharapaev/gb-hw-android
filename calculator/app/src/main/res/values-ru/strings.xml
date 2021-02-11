@@ -27,6 +27,6 @@
 
     <!-- Sync Preferences -->
     <string name="theme_title">Тема приложения</string>
-    <string name="theme_summary_on">Светлая тема</string>
-    <string name="theme_summary_off">Темная тема</string>
+    <string name="dark_theme_on">Темная тема</string>
+    <string name="dark_theme_off">Светлая тема</string>
 </resources>
