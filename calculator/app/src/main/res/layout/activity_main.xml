@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.main.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -49,6 +49,16 @@
                     android:textAlignment="textEnd" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/Widget.App.Button.TextButton.IconOnly"
+            app:icon="@drawable/ic_settings"
+            app:layout_constraintBottom_toTopOf="@id/buttonDivision"
+            app:layout_constraintEnd_toEndOf="@id/buttonDivision"
+            app:layout_constraintStart_toStartOf="@id/buttonDivision" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonClear"

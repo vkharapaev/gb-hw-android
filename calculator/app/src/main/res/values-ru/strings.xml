@@ -23,10 +23,10 @@
     <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->
-    <string name="general_header">General</string>
+    <string name="general_header">Общие</string>
 
     <!-- Sync Preferences -->
-    <string name="theme_title">App theme</string>
-    <string name="theme_summary_on">Light theme</string>
-    <string name="theme_summary_off">Dark theme</string>
+    <string name="theme_title">Тема приложения</string>
+    <string name="theme_summary_on">Светлая тема</string>
+    <string name="theme_summary_off">Темная тема</string>
 </resources>

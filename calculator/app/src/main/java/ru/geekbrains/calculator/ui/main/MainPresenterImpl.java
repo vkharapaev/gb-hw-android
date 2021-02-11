@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator.ui;
+package ru.geekbrains.calculator.ui.main;
 
 import android.util.Log;
 

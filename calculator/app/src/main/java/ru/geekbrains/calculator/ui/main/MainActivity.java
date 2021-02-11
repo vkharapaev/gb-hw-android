@@ -1,5 +1,6 @@
-package ru.geekbrains.calculator.ui;
+package ru.geekbrains.calculator.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import ru.geekbrains.calculator.databinding.ActivityMainBinding;
+import ru.geekbrains.calculator.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView {
 
