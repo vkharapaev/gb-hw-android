@@ -4,4 +4,14 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/small_components_corner_radius</item>
     </style>
+
+    <style name="ExpressionDisplayStyle">
+        <item name="android:textAppearance">?textAppearanceHeadline4</item>
+        <item name="android:textColor">@color/purple_700</item>
+    </style>
+
+    <style name="NumberDisplayStyle">
+        <item name="android:textAppearance">?textAppearanceHeadline4</item>
+        <item name="android:textColor">@color/purple_700</item>
+    </style>
 </resources>

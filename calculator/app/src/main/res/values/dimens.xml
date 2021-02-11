@@ -3,4 +3,6 @@
     <dimen name="button_margin">4dp</dimen>
     <dimen name="button_text_size">20sp</dimen>
     <dimen name="small_components_corner_radius">16dp</dimen>
+    <dimen name="display_padding">8dp</dimen>
+    <dimen name="expression_display_bottom">8dp</dimen>
 </resources>
