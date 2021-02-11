@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator.ui;
+package ru.geekbrains.calculator;
 
 import android.content.Context;
 import android.content.SharedPreferences;
