@@ -1,20 +1,18 @@
 package ru.geekbrains.calculator.ui.main;
 
-import android.util.Log;
-
 import java.lang.ref.WeakReference;
 
-import ru.geekbrains.calculator.interactors.OperationProcessorInteractor;
+import ru.geekbrains.calculator.Calculator;
 
 public class MainPresenterImpl implements MainPresenter {
 
     private static final String TAG = MainPresenterImpl.class.getSimpleName();
 
     private WeakReference<MainView> view;
-    private OperationProcessorInteractor opProcessorInteractor;
+    private Calculator calculator;
 
-    public MainPresenterImpl(OperationProcessorInteractor interactor) {
-        opProcessorInteractor = interactor;
+    public MainPresenterImpl(Calculator calculator) {
+        this.calculator = calculator;
     }
 
     @Override
@@ -28,12 +26,12 @@ public class MainPresenterImpl implements MainPresenter {
             return;
         }
         try {
-            opProcessorInteractor.process(operation);
-            view().show(opProcessorInteractor.getNumCreator().toString());
+            calculator.process(operation);
+            view().show(calculator.getNumCreator().toString());
         } catch (ArithmeticException e) {
             view().show(e.getMessage());
         }
-        view().showExpression(opProcessorInteractor.getExpCreator().toString());
+        view().showExpression(calculator.getExpCreator().toString());
     }
 
     private MainView view() {

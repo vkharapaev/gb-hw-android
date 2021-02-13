@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator.interactors;
+package ru.geekbrains.calculator;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
@@ -15,7 +15,7 @@ import static ru.geekbrains.calculator.expression.ExpUtil.isRightBracket;
 import static ru.geekbrains.calculator.number.NumUtil.isDigit;
 import static ru.geekbrains.calculator.number.NumUtil.isDot;
 
-public class OperationProcessorInteractorImpl implements OperationProcessorInteractor {
+public class Calculator {
 
     private static final String OPERATION_EQ = "=";
     private static final String OPERATION_DEL = "<";
@@ -26,22 +26,19 @@ public class OperationProcessorInteractorImpl implements OperationProcessorInter
     private final NumCreator numCreator;
     private boolean isEqApplied = false;
 
-    public OperationProcessorInteractorImpl() {
+    public Calculator() {
         expCreator = new InfixExpCreator();
         numCreator = new NumCreator();
     }
 
-    @Override
     public InfixExpCreator getExpCreator() {
         return expCreator;
     }
 
-    @Override
     public NumCreator getNumCreator() {
         return numCreator;
     }
 
-    @Override
     public void process(String operation) throws ArithmeticException {
         if (isDigit(operation) || isDot(operation)) {
             if (isEqApplied) {
