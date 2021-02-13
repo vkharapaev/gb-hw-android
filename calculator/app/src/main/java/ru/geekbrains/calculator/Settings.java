@@ -5,8 +5,6 @@ import android.content.SharedPreferences;
 
 import androidx.preference.PreferenceManager;
 
-import ru.geekbrains.calculator.R;
-
 public class Settings {
 
     private final SharedPreferences preferences;

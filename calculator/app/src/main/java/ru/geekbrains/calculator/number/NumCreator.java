@@ -50,9 +50,7 @@ public class NumCreator {
      */
     public void removeLast() {
         String last = number.pollLast();
-        if (last == null) {
-
-        } else if (isDot(last)) {
+        if (isDot(last)) {
             dot = false;
         }
     }
@@ -81,7 +79,7 @@ public class NumCreator {
     /**
      * Return a string representation of this number
      *
-     * @return
+     * @return String
      */
     @Override
     public String toString() {

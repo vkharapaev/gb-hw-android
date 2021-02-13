@@ -6,10 +6,8 @@ import ru.geekbrains.calculator.Calculator;
 
 public class MainPresenterImpl implements MainPresenter {
 
-    private static final String TAG = MainPresenterImpl.class.getSimpleName();
-
     private WeakReference<MainView> view;
-    private Calculator calculator;
+    private final Calculator calculator;
 
     public MainPresenterImpl(Calculator calculator) {
         this.calculator = calculator;

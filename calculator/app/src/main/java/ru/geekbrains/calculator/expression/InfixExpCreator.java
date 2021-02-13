@@ -13,7 +13,7 @@ public class InfixExpCreator {
     private static final String LEFT_BRACKET = "(";
     private static final String RIGHT_BRACKET = ")";
 
-    private LinkedList<String> infixExp;
+    private final LinkedList<String> infixExp;
     private int leftBrackets;
     private int rightBrackets;
 

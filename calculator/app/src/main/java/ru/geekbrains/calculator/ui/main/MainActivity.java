@@ -16,8 +16,6 @@ import ru.geekbrains.calculator.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
-
     private ActivityMainBinding binding;
     private MainPresenter presenter;
     private Settings settings;
