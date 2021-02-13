@@ -4,4 +4,25 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/small_components_corner_radius</item>
     </style>
+
+    <style name="ExpressionDisplayStyle">
+        <item name="android:textAppearance">?textAppearanceHeadline4</item>
+        <item name="android:textColor">@color/purple_700</item>
+    </style>
+
+    <style name="NumberDisplayStyle">
+        <item name="android:textAppearance">?textAppearanceHeadline4</item>
+        <item name="android:textColor">@color/purple_700</item>
+    </style>
+
+    <style name="Widget.App.Button.TextButton.IconOnly" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+
 </resources>

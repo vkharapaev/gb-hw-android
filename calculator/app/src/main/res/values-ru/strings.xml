@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="button_c">C</string>
+    <string name="button_parentheses">()</string>
+    <string name="button_backspace"><![CDATA[<]]></string>
+    <string name="button_division">/</string>
+    <string name="button_num_7">7</string>
+    <string name="button_num_8">8</string>
+    <string name="button_num_9">9</string>
+    <string name="button_multiplication">*</string>
+    <string name="button_num_4">4</string>
+    <string name="button_num_5">5</string>
+    <string name="button_num_6">6</string>
+    <string name="button_subtraction">-</string>
+    <string name="button_num_1">1</string>
+    <string name="button_num_2">2</string>
+    <string name="button_num_3">3</string>
+    <string name="button_addition">+</string>
+    <string name="button_plus_minus">+/-</string>
+    <string name="button_num_0">0</string>
+    <string name="button_dot">.</string>
+    <string name="button_equal">=</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="general_header">Общие</string>
+
+    <!-- Sync Preferences -->
+    <string name="theme_title">Тема приложения</string>
+    <string name="dark_theme_on">Темная тема</string>
+    <string name="dark_theme_off">Светлая тема</string>
+</resources>

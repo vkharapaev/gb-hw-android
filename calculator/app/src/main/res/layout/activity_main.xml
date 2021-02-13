@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.main.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -16,6 +16,47 @@
         android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonSettings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/display_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/expressionDisplay"
+                    style="@style/ExpressionDisplayStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/expression_display_bottom"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/numberDisplay"
+                    style="@style/NumberDisplayStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/Widget.App.Button.TextButton.IconOnly"
+            app:icon="@drawable/ic_settings"
+            app:layout_constraintBottom_toTopOf="@id/buttonDivision"
+            app:layout_constraintEnd_toEndOf="@id/buttonDivision"
+            app:layout_constraintStart_toStartOf="@id/buttonDivision" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonClear"

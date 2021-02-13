@@ -20,4 +20,14 @@
     <string name="button_num_0">0</string>
     <string name="button_dot">.</string>
     <string name="button_equal">=</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="general_header">General</string>
+
+    <!-- Sync Preferences -->
+    <string name="theme_title">App theme</string>
+    <string name="dark_theme_on">Dark theme</string>
+    <string name="dark_theme_off">Light theme</string>
+    <string name="settings_key_theme" translatable="false">theme</string>
 </resources>
