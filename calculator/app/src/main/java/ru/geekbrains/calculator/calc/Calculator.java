@@ -1,19 +1,19 @@
-package ru.geekbrains.calculator;
+package ru.geekbrains.calculator.calc;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
-import ru.geekbrains.calculator.expression.Exp;
-import ru.geekbrains.calculator.expression.InfixExpCreator;
-import ru.geekbrains.calculator.number.NumCreator;
+import ru.geekbrains.calculator.calc.expression.Exp;
+import ru.geekbrains.calculator.calc.expression.InfixExpCreator;
+import ru.geekbrains.calculator.calc.number.NumCreator;
 
-import static ru.geekbrains.calculator.expression.ExpUtil.isLeftBracket;
-import static ru.geekbrains.calculator.expression.ExpUtil.isOperator;
-import static ru.geekbrains.calculator.expression.ExpUtil.isRightBracket;
-import static ru.geekbrains.calculator.number.NumUtil.isDigit;
-import static ru.geekbrains.calculator.number.NumUtil.isDot;
+import static ru.geekbrains.calculator.calc.expression.ExpUtil.isLeftBracket;
+import static ru.geekbrains.calculator.calc.expression.ExpUtil.isOperator;
+import static ru.geekbrains.calculator.calc.expression.ExpUtil.isRightBracket;
+import static ru.geekbrains.calculator.calc.number.NumUtil.isDigit;
+import static ru.geekbrains.calculator.calc.number.NumUtil.isDot;
 
 public class Calculator {
 

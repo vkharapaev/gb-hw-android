@@ -2,7 +2,7 @@ package ru.geekbrains.calculator.ui.main;
 
 import java.lang.ref.WeakReference;
 
-import ru.geekbrains.calculator.Calculator;
+import ru.geekbrains.calculator.calc.Calculator;
 
 public class MainPresenterImpl implements MainPresenter {
 

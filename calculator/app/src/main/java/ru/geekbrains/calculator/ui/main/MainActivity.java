@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import ru.geekbrains.calculator.Settings;
 import ru.geekbrains.calculator.databinding.ActivityMainBinding;
-import ru.geekbrains.calculator.Calculator;
+import ru.geekbrains.calculator.calc.Calculator;
 import ru.geekbrains.calculator.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView {

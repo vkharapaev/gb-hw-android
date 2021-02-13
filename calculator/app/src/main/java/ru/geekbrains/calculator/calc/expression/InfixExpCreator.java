@@ -1,12 +1,12 @@
-package ru.geekbrains.calculator.expression;
+package ru.geekbrains.calculator.calc.expression;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import static ru.geekbrains.calculator.expression.ExpUtil.isLeftBracket;
-import static ru.geekbrains.calculator.expression.ExpUtil.isNum;
-import static ru.geekbrains.calculator.expression.ExpUtil.isOperator;
-import static ru.geekbrains.calculator.expression.ExpUtil.isRightBracket;
+import static ru.geekbrains.calculator.calc.expression.ExpUtil.isLeftBracket;
+import static ru.geekbrains.calculator.calc.expression.ExpUtil.isNum;
+import static ru.geekbrains.calculator.calc.expression.ExpUtil.isOperator;
+import static ru.geekbrains.calculator.calc.expression.ExpUtil.isRightBracket;
 
 public class InfixExpCreator {
 
