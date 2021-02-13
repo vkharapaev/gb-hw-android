@@ -1,6 +1,8 @@
 package com.headmostlab.calculator.ui.main;
 
-public interface MainPresenter {
+import java.io.Serializable;
+
+public interface MainPresenter extends Serializable {
 
     void takeView(MainView view);
 

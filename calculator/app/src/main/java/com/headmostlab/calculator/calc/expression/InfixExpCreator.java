@@ -166,6 +166,26 @@ public class InfixExpCreator {
     }
 
     /**
+     * Set new expression.
+     *
+     * @param expression Expression to set
+     */
+    public void set(String expression) {
+        if (expression == null) {
+            return;
+        }
+        clear();
+        for (String token : expression.split("\\s")) {
+            add(token);
+            if (isLeftBracket(token)) {
+                leftBrackets++;
+            } else if (isRightBracket(token)) {
+                rightBrackets++;
+            }
+        }
+    }
+
+    /**
      * Return a finalized infix expression
      *
      * @return Expression

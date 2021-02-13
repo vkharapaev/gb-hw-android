@@ -107,7 +107,7 @@ public class NumCreator {
     /**
      * Set a new number to this number creator
      *
-     * @param newNumber
+     * @param newNumber Number to set
      */
     public void set(String newNumber) {
         if (newNumber == null) {

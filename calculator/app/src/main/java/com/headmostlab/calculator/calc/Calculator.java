@@ -1,13 +1,16 @@
 package com.headmostlab.calculator.calc;
 
-import java.math.BigDecimal;
-import java.text.NumberFormat;
-import java.util.List;
-import java.util.Locale;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.headmostlab.calculator.calc.expression.Exp;
 import com.headmostlab.calculator.calc.expression.InfixExpCreator;
 import com.headmostlab.calculator.calc.number.NumCreator;
+
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.util.List;
+import java.util.Locale;
 
 import static com.headmostlab.calculator.calc.expression.ExpUtil.isLeftBracket;
 import static com.headmostlab.calculator.calc.expression.ExpUtil.isOperator;
@@ -15,7 +18,7 @@ import static com.headmostlab.calculator.calc.expression.ExpUtil.isRightBracket;
 import static com.headmostlab.calculator.calc.number.NumUtil.isDigit;
 import static com.headmostlab.calculator.calc.number.NumUtil.isDot;
 
-public class Calculator {
+public class Calculator implements Parcelable {
 
     private static final String OPERATION_EQ = "=";
     private static final String OPERATION_DEL = "<";
@@ -29,6 +32,12 @@ public class Calculator {
     public Calculator() {
         expCreator = new InfixExpCreator();
         numCreator = new NumCreator();
+    }
+
+    public Calculator(Parcel src) {
+        this();
+        numCreator.set(src.readString());
+        expCreator.set(src.readString());
     }
 
     public InfixExpCreator getExpCreator() {
@@ -82,4 +91,28 @@ public class Calculator {
         numberFormat.setGroupingUsed(false);
         return numberFormat.format(num);
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(numCreator.toString());
+        dest.writeString(expCreator.toString());
+    }
+
+    public static final Parcelable.Creator<Calculator> CREATOR = new Parcelable.Creator<Calculator>() {
+
+        @Override
+        public Calculator createFromParcel(Parcel source) {
+            return new Calculator(source);
+        }
+
+        @Override
+        public Calculator[] newArray(int size) {
+            return new Calculator[size];
+        }
+    };
 }

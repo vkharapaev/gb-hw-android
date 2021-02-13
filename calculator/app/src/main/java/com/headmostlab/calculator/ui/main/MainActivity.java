@@ -16,18 +16,20 @@ import com.headmostlab.calculator.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView {
 
+    public static final String PRESENTER_KEY = "presenter";
     private ActivityMainBinding binding;
     private MainPresenter presenter;
     private Settings settings;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle state) {
+        super.onCreate(state);
         settings = new Settings(this);
         changeTheme();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        presenter = new ViewModelProvider(this, new ViewModelFactory()).get(MainPresenterImpl.class);
+        presenter = new ViewModelProvider(this, new ViewModelFactory(this, null))
+                .get(MainPresenterImpl.class);
         initWidgets();
         presenter.takeView(this);
     }
