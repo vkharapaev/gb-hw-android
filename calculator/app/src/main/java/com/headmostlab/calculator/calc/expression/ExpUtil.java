@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator.calc.expression;
+package com.headmostlab.calculator.calc.expression;
 
 import java.util.regex.Pattern;
 

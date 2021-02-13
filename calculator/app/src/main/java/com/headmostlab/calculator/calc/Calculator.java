@@ -1,19 +1,19 @@
-package ru.geekbrains.calculator.calc;
+package com.headmostlab.calculator.calc;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
-import ru.geekbrains.calculator.calc.expression.Exp;
-import ru.geekbrains.calculator.calc.expression.InfixExpCreator;
-import ru.geekbrains.calculator.calc.number.NumCreator;
+import com.headmostlab.calculator.calc.expression.Exp;
+import com.headmostlab.calculator.calc.expression.InfixExpCreator;
+import com.headmostlab.calculator.calc.number.NumCreator;
 
-import static ru.geekbrains.calculator.calc.expression.ExpUtil.isLeftBracket;
-import static ru.geekbrains.calculator.calc.expression.ExpUtil.isOperator;
-import static ru.geekbrains.calculator.calc.expression.ExpUtil.isRightBracket;
-import static ru.geekbrains.calculator.calc.number.NumUtil.isDigit;
-import static ru.geekbrains.calculator.calc.number.NumUtil.isDot;
+import static com.headmostlab.calculator.calc.expression.ExpUtil.isLeftBracket;
+import static com.headmostlab.calculator.calc.expression.ExpUtil.isOperator;
+import static com.headmostlab.calculator.calc.expression.ExpUtil.isRightBracket;
+import static com.headmostlab.calculator.calc.number.NumUtil.isDigit;
+import static com.headmostlab.calculator.calc.number.NumUtil.isDot;
 
 public class Calculator {
 

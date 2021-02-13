@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator.ui.main;
+package com.headmostlab.calculator.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import ru.geekbrains.calculator.Settings;
-import ru.geekbrains.calculator.databinding.ActivityMainBinding;
-import ru.geekbrains.calculator.calc.Calculator;
-import ru.geekbrains.calculator.ui.settings.SettingsActivity;
+import com.headmostlab.calculator.Settings;
+import com.headmostlab.calculator.databinding.ActivityMainBinding;
+import com.headmostlab.calculator.calc.Calculator;
+import com.headmostlab.calculator.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView {
 

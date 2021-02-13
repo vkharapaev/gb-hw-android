@@ -1,8 +1,8 @@
-package ru.geekbrains.calculator.ui.main;
+package com.headmostlab.calculator.ui.main;
 
 import java.lang.ref.WeakReference;
 
-import ru.geekbrains.calculator.calc.Calculator;
+import com.headmostlab.calculator.calc.Calculator;
 
 public class MainPresenterImpl implements MainPresenter {
 

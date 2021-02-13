@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator.calc.number;
+package com.headmostlab.calculator.calc.number;
 
 import java.util.regex.Pattern;
 

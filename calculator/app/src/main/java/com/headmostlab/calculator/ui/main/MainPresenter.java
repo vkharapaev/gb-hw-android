@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator.ui.main;
+package com.headmostlab.calculator.ui.main;
 
 public interface MainPresenter {
 

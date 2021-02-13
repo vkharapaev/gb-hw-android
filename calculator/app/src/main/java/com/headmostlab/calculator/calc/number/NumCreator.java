@@ -1,11 +1,11 @@
-package ru.geekbrains.calculator.calc.number;
+package com.headmostlab.calculator.calc.number;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 
-import static ru.geekbrains.calculator.calc.number.NumUtil.isDigit;
-import static ru.geekbrains.calculator.calc.number.NumUtil.isDot;
-import static ru.geekbrains.calculator.calc.number.NumUtil.isMinus;
+import static com.headmostlab.calculator.calc.number.NumUtil.isDigit;
+import static com.headmostlab.calculator.calc.number.NumUtil.isDot;
+import static com.headmostlab.calculator.calc.number.NumUtil.isMinus;
 
 public class NumCreator {
 

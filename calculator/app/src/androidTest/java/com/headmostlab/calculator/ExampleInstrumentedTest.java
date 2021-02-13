@@ -1,4 +1,4 @@
-package ru.geekbrains.calculator;
+package com.headmostlab.calculator;
 
 import android.content.Context;
 

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "ru.geekbrains.calculator"
+        applicationId "com.headmostlab.calculator"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
