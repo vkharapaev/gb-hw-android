@@ -1,10 +1,12 @@
 package com.headmostlab.calculator.ui.main;
 
+import androidx.lifecycle.ViewModel;
+
 import java.lang.ref.WeakReference;
 
 import com.headmostlab.calculator.calc.Calculator;
 
-public class MainPresenterImpl implements MainPresenter {
+public class MainPresenterImpl extends ViewModel implements MainPresenter {
 
     private WeakReference<MainView> view;
     private final Calculator calculator;
@@ -16,6 +18,15 @@ public class MainPresenterImpl implements MainPresenter {
     @Override
     public void takeView(MainView view) {
         this.view = new WeakReference<>(view);
+        updateDisplay();
+    }
+
+    private void updateDisplay() {
+        if (view() == null) {
+            return;
+        }
+        view().show(calculator.getNumCreator().toString());
+        view().showExpression(calculator.getExpCreator().toString());
     }
 
     @Override

@@ -8,10 +8,10 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.headmostlab.calculator.Settings;
 import com.headmostlab.calculator.databinding.ActivityMainBinding;
-import com.headmostlab.calculator.calc.Calculator;
 import com.headmostlab.calculator.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity implements MainView {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         changeTheme();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        presenter = new MainPresenterImpl(new Calculator());
+        presenter = new ViewModelProvider(this, new ViewModelFactory()).get(MainPresenterImpl.class);
         initWidgets();
         presenter.takeView(this);
     }
